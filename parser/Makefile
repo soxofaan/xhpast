@@ -1,3 +1,5 @@
+# modified by Sean Coates in accordance with the license
+
 ifdef DEBUG
 CPPFLAGS = -fPIC -ggdb -Wall -DDEBUG
 else
