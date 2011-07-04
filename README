@@ -1,0 +1,17 @@
+XHPAST
+
+An abstract syntax tree parser for PHP.
+
+Developed by/at Facebook and packaged as part of libphutil:
+  https://github.com/facebook/libphutil
+
+Some API documentation (maintained by Facebook) can be found here:
+  http://www.phabricator.com/docs/libphutil/#xhpast
+
+To use, you'll need to build the xhpast binary:
+  $ cd parser && make install
+
+Then the following to see a text rendering of the AST of the example script:
+  $ php example.php example.php
+
+
