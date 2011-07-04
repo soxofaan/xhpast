@@ -1,12 +1,6 @@
+#!/usr/bin/env php
 <?php
-
-require 'XHPASTSyntaxErrorException.php';
-require 'XHPASTNodeList.php';
-require 'XHPASTNode.php';
-require 'XHPASTToken.php';
-require 'XHPASTTree.php';
-require 'utils.php';
-require 'xhpast_parse.php';
+require __DIR__ . '/bootstrap.php';
 
 if (!isset($argv[1]) || !is_readable($argv[1])) {
   echo "Usage: {$argv[0]} path/to/php/file.php\n";
