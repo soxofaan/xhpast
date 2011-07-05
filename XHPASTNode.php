@@ -279,7 +279,7 @@ class XHPASTNode {
   protected function getTypeIDFromTypeName($type_name) {
     static $node_types;
     if (empty($node_types)) {
-      $node_types = xhp_parser_node_constants();
+      $node_types = self::$NODES;
       $node_types = array_flip($node_types);
     }
 
