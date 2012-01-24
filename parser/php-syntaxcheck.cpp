@@ -92,16 +92,23 @@ int main(int argc, char* argv[]) {
     return 0;
   }
 
-  string filename(argv[1]);
-  SyntaxCheckResult result = php_syntax_check_file(filename);
+  int error_counter = 0;
 
-  if (result.success) {
-    cout << filename << ": " << "ok" << endl;
-  }
-  else {
-    cout << filename << ": " << "XHPAST Parse Error \"" << result.error << "\" on line " << result.line_number << endl;
+  for (int i = 1; i < argc; i++) {
+    string filename(argv[i]);
+    SyntaxCheckResult result = php_syntax_check_file(filename);
+
+    if (result.success) {
+      cout << filename << ": " << "ok" << endl;
+    }
+    else {
+      cout << filename << ": " << "XHPAST Parse Error \"" << result.error << "\" on line " << result.line_number << endl;
+      error_counter++;
+    }
   }
 
+  // Exit with number of errors.
+  return error_counter;
 }
 
 
