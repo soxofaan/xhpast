@@ -57,4 +57,7 @@ libxhpast.a: astnode.o scanner.lex.o parser.yacc.o
 xhpast: xhpast.cpp libxhpast.a
 	$(CXX) $(CPPFLAGS) -o $@ $^
 
+php-syntaxcheck: php-syntaxcheck.o libxhpast.a
+	$(CXX) $(CPPFLAGS) -o $@ $^
+
 .PHONY: all clean
