@@ -102,7 +102,7 @@ int main(int argc, char* argv[]) {
       cout << filename << ": " << "ok" << endl;
     }
     else {
-      cout << filename << ": " << "XHPAST Parse Error \"" << result.error << "\" on line " << result.line_number << endl;
+      cerr << filename << ": " << "XHPAST Parse Error \"" << result.error << "\" on line " << result.line_number << endl;
       error_counter++;
     }
   }
