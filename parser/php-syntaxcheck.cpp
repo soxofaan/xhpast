@@ -51,7 +51,7 @@ SyntaxCheckResult php_syntax_check_string(std::string &in) {
   extra.idx_expr = true;//flags.idx_expr;
   extra.include_debug = true;//flags.include_debug;
   extra.insert_token = 0;//flags.eval ? T_OPEN_TAG_FAKE : 0;
-  extra.short_tags = true;//flags.short_tags;
+  extra.short_tags = false;//flags.short_tags;
   extra.asp_tags = false;//flags.asp_tags;
 
   xhpast::Node *root = NULL;
